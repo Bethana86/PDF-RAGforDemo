@@ -172,3 +172,24 @@ if st.session_state['generated']:
             message(st.session_state["generated"][i], key=str(i), avatar_style="bottts",seed="bob")
     
     st.button("Clear message", on_click=clear_chat)
+
+def hide_streamlit_logo():
+    # Hide the "hosted with Streamlit" logo
+    hide_css = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    </style>
+    """
+    st.markdown(hide_css, unsafe_allow_html=True)
+
+hide_streamlit_logo()
+
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
