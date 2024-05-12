@@ -36,7 +36,17 @@ st.set_page_config(
     layout="centered",  # Page layout option
 )
 st.title("RAG GenAI - Chat with PDF Document")
+def hide_streamlit_logo():
+    # Hide the "hosted with Streamlit" logo
+    hide_css = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    </style>
+    """
+    st.markdown(hide_css, unsafe_allow_html=True)
 
+hide_streamlit_logo()
 @st.cache_resource(ttl="1h")
 def configure_retriever(uploaded_file, google_api_key):
     # Generate a unique identifier for the file
@@ -172,18 +182,6 @@ if st.session_state['generated']:
             message(st.session_state["generated"][i], key=str(i), avatar_style="bottts",seed="bob")
     
     st.button("Clear message", on_click=clear_chat)
-
-def hide_streamlit_logo():
-    # Hide the "hosted with Streamlit" logo
-    hide_css = """
-    <style>
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    </style>
-    """
-    st.markdown(hide_css, unsafe_allow_html=True)
-
-hide_streamlit_logo()
 
 hide_st_style = """
             <style>
