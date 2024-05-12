@@ -88,9 +88,9 @@ def clear_chat():
     del st.session_state.past[:]
     del st.session_state.generated[:]        
         
-google_api_key = st.sidebar.text_input("Gemini API Key", type="password")
+google_api_key = st.sidebar.text_input("Enter API Key", type="password")
 if not google_api_key:
-    st.info("Please add your Gemini API key to continue.")
+    st.info("Please add your API key to continue.")
     st.stop()
     
 uploaded_file = st.sidebar.file_uploader(
