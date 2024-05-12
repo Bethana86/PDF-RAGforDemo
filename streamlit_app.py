@@ -29,8 +29,12 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.document_loaders import PyPDFLoader
 
 
-st.set_page_config(page_title="Chat with Documents", page_icon="⛓️")
-st.title("Chat with Documents")
+# Configure Streamlit page settings
+st.set_page_config(
+    page_title="ALGOSTATS GenAI!",
+    page_icon=":brain:",  # Favicon emoji
+    layout="centered",  # Page layout option
+)
 
 
 @st.cache_resource(ttl="1h")
