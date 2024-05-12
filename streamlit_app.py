@@ -32,7 +32,7 @@ from langchain.document_loaders import PyPDFLoader
 # Configure Streamlit page settings
 st.set_page_config(
     page_title="RAG GenAI - Chat with PDF Document",
-    page_icon=":brain:",  # Favicon emoji
+    page_icon=":ai:",  # Favicon emoji
     layout="centered",  # Page layout option
 )
 st.title("RAG GenAI - Chat with PDF Document")
