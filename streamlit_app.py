@@ -31,11 +31,11 @@ from langchain.document_loaders import PyPDFLoader
 
 # Configure Streamlit page settings
 st.set_page_config(
-    page_title="RAG GenAI - Chat with Documents",
+    page_title="RAG GenAI - Chat with PDF Document",
     page_icon=":brain:",  # Favicon emoji
     layout="centered",  # Page layout option
 )
-
+st.title("RAG GenAI - Chat with PDF Document")
 
 @st.cache_resource(ttl="1h")
 def configure_retriever(uploaded_file, google_api_key):
