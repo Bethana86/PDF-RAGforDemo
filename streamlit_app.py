@@ -182,7 +182,6 @@ if st.session_state['generated']:
             message(st.session_state["generated"][i], key=str(i), avatar_style="bottts",seed="bob")
     
     st.button("Clear message", on_click=clear_chat)
-
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
@@ -191,3 +190,6 @@ hide_st_style = """
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
+
+
+
