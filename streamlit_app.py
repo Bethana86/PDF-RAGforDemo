@@ -137,7 +137,7 @@ safety_settings = [
 ]
 
 
-model_safety_none = ChatGoogleGenerativeAI(model="gemini-pro",google_api_key=google_api_key,
+model_safety_none = ChatGoogleGenerativeAI(model="gemini-2.0-flash-exp",google_api_key=google_api_key,
                              temperature=0.0,convert_system_message_to_human=True, safety_settings=safety_settings)
 
 
